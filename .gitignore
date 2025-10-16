@@ -1,0 +1,129 @@
+# .gitignore for Python projects
+
+# --- Byte-compiled / optimized / C extension files ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- C extensions ---
+*.so
+
+# --- Distribution / packaging ---
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- PyInstaller ---
+# Usually these files are created by a CI server and aren't needed in git.
+*.spec
+
+# --- Installer logs ---
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Virtual Environments ---
+# It's a best practice to not commit your virtual environment.
+# Create a requirements.txt file instead.
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Test & Coverage Reports ---
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+pytestdebug.log
+
+# --- Type checker caches ---
+.mypy_cache/
+.pyre/
+.pytype/
+
+# --- Linter caches ---
+.ruff_cache/
+
+# --- Jupyter Notebook ---
+# Checkpoints are auto-saved versions of your notebooks.
+.ipynb_checkpoints
+
+# --- IDE / Editor specific ---
+# PyCharm
+.idea/
+
+# Visual Studio Code
+.vscode/
+# Note: You might want to track .vscode/settings.json to share editor settings.
+# If so, add this line:
+# !.vscode/settings.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*~
+
+# --- Databases ---
+# Local database files should not be committed.
+*.sqlite3
+*.db
+db.sqlite3
+
+# --- Log files ---
+*.log
+logs/
+
+# --- Environment variables / Secrets ---
+# Never commit secrets or environment-specific configurations.
+# Use a .env.example file to show what variables are needed.
+.env.*
+*.env
+secrets.ini
+secrets.py
+*.pem
+*.key
+
+# --- OS-specific files ---
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# --- Django specific ---
+# Collected static files for deployment
+staticfiles/
+# Media files uploaded by users
+media/
+
+# --- Flask specific ---
+instance/
+.webassets-cache

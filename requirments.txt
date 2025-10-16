@@ -1,0 +1,2 @@
+fastmcp==2.12.4
+google-adk==1.16.0
