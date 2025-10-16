@@ -99,16 +99,28 @@ It should output something like this:
 ```
 
 ### Step 2: Run the ADK Agent
-You'll need to create a `.env` file in the `agents/mcp_demo/` directory consisting of the following information:
-```
-# For use on Google Cloud Vertex AI
+You'll need to create a `.env` file in the `agents/mcp_demo/` directory with your environment configuration, you can use this with either Google Cloud's Vertex AI or Google AI Studio:
+#### For Google Cloud Vertex AI
+Your .env will need to look like this:
+```dotenv
 GOOGLE_GENAI_USE_VERTEXAI=1
-GOOGLE_CLOUD_PROJECT=<your-gcp-project-id>
+GOOGLE_CLOUD_PROJECT=<your-project-id>
 GOOGLE_CLOUD_LOCATION=us-central1
+```
 
-# For use with Google AI Studio you need:
+For Google Cloud Vertex AI, you will also need to authenticate your environment. This requires the gcloud CLI.
+Install the gcloud CLI by following the instructions [here](https://cloud.google.com/sdk/docs/install)
+##### Configure your GCP project:
+```sh
+gcloud config set project <your_project_id>
+gcloud auth application-default login
+```
+
+#### For Google AI Studio
+Your `.env` file should look like this:
+```dotenv
 GOOGLE_GENAI_USE_VERTEXAI=0
-GOOGLE_API_KEY="YOUR_API_KEY"
+GOOGLE_API_KEY=<your_api_key>
 ```
 
 In a second terminal (ensure your virtual environment is active), use the `adk` command-line tool to run the agent.
