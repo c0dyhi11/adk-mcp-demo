@@ -58,9 +58,9 @@ Follow these instructions to set up and run the demo.
     ```
 
 3.  **Install the required dependencies:**
-    This project depends on `google-adk` and `fastmcp` which are in the included requirments.txt.
+    This project depends on `google-adk` and `fastmcp` which are in the included requirements.txt.
     ```sh
-    pip install -r requirment.txt"
+    pip install -r requirements.txt
     ```
 
 ## How to Run the Demo
