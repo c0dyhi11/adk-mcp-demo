@@ -1,6 +1,6 @@
 # ADK and FastMCP Integration Demo
 
-This repository contains a demonstration project showcasing the integration between the Google Agent Development Kit (ADK) and a FastMCP (Fast Multi-Capability Proxy) server.
+This repository contains a demonstration project showcasing the integration between the Google's [Agent Development Kit (ADK)](https://google.github.io/adk-docs) and a [FastMCP (Fast Multi-Capability Proxy)](https://gofastmcp.com) server.
 
 The project consists of two main components:
 1.  A **FastMCP server** that exposes several tools via an HTTP endpoint.
@@ -46,8 +46,8 @@ Follow these instructions to set up and run the demo.
 
 1.  **Clone the repository:**
     ```sh
-    git clone <your-repo-url>
-    cd adk_mcp_demo
+    git clone https://github.com/c0dyhi11/adk-mcp-demo.git
+    cd adk-mcp-demo
     ```
 
 2.  **Set up a virtual environment (recommended):**
@@ -58,9 +58,9 @@ Follow these instructions to set up and run the demo.
     ```
 
 3.  **Install the required dependencies:**
-    This project depends on `google-adk` and `fastmcp` which are in the included requirments.txt.
+    This project depends on `google-adk` and `fastmcp` which are in the included requirements.txt.
     ```sh
-    pip install -r requirment.txt"
+    pip install -r requirements.txt
     ```
 
 ## How to Run the Demo
@@ -99,16 +99,28 @@ It should output something like this:
 ```
 
 ### Step 2: Run the ADK Agent
-You'll need to create a `.env` file in the `agents/mcp_demo/` directory consisting of the following information:
-```
-# For use on Google Cloud Vertex AI
+You'll need to create a `.env` file in the `agents/mcp_demo/` directory with your environment configuration, you can use this with either Google Cloud's Vertex AI or Google AI Studio:
+#### For Google Cloud Vertex AI
+Your .env will need to look like this:
+```dotenv
 GOOGLE_GENAI_USE_VERTEXAI=1
-GOOGLE_CLOUD_PROJECT=<your-gcp-project-id>
+GOOGLE_CLOUD_PROJECT=<your-project-id>
 GOOGLE_CLOUD_LOCATION=us-central1
+```
 
-# For use with Google AI Studio you need:
+For Google Cloud Vertex AI, you will also need to authenticate your environment. This requires the gcloud CLI.
+Install the gcloud CLI by following the instructions [here](https://cloud.google.com/sdk/docs/install)
+##### Configure your GCP project:
+```sh
+gcloud config set project <your_project_id>
+gcloud auth application-default login
+```
+
+#### For Google AI Studio
+Your `.env` file should look like this:
+```dotenv
 GOOGLE_GENAI_USE_VERTEXAI=0
-GOOGLE_API_KEY="YOUR_API_KEY"
+GOOGLE_API_KEY=<your_api_key>
 ```
 
 In a second terminal (ensure your virtual environment is active), use the `adk` command-line tool to run the agent.
