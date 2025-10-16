@@ -1,6 +1,6 @@
 # ADK and FastMCP Integration Demo
 
-This repository contains a demonstration project showcasing the integration between the Google Agent Development Kit (ADK) and a FastMCP (Fast Multi-Capability Proxy) server.
+This repository contains a demonstration project showcasing the integration between the Google's [Agent Development Kit (ADK)](https://google.github.io/adk-docs) and a [FastMCP (Fast Multi-Capability Proxy)](https://gofastmcp.com) server.
 
 The project consists of two main components:
 1.  A **FastMCP server** that exposes several tools via an HTTP endpoint.
@@ -46,8 +46,8 @@ Follow these instructions to set up and run the demo.
 
 1.  **Clone the repository:**
     ```sh
-    git clone <your-repo-url>
-    cd adk_mcp_demo
+    git clone https://github.com/c0dyhi11/adk-mcp-demo.git
+    cd adk-mcp-demo
     ```
 
 2.  **Set up a virtual environment (recommended):**
